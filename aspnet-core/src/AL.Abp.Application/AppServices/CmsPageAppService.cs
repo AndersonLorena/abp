@@ -1,35 +1,29 @@
 ﻿using AL.Abp.Dtos;
 using AL.Abp.Entities;
+using Microsoft.AspNetCore.Authorization;
 using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
+using Volo.Abp.Application.Dtos;
 using Volo.Abp.Application.Services;
 using Volo.Abp.Domain.Repositories;
 
 namespace AL.Abp.AppServices
 {
-    public class CmsPageAppService : ApplicationService, ICmsPageAppService
+    [Authorize]
+    public class CmsPageAppService(IRepository<CmsPage, Guid> repository) : CrudAppService<
+        CmsPage, CmsPageDto, Guid, PagedAndSortedResultRequestDto, CreateUpdateCmsPageDto>(repository),
+        ICmsPageAppService
     {
-        private readonly IRepository<CmsPage, Guid> _repository;
-
-        public CmsPageAppService(IRepository<CmsPage, Guid> repository)
+        [AllowAnonymous]
+        public override async Task<CmsPageDto> GetAsync(Guid id)
         {
-            _repository = repository;
+            return await base.GetAsync(id);
         }
 
-        public async Task<List<CmsPageDto>> GetAll()
+        [AllowAnonymous]
+        public override async Task<PagedResultDto<CmsPageDto>> GetListAsync(PagedAndSortedResultRequestDto input)
         {
-            throw new NotImplementedException();
-        }
-
-        public async Task<CmsPageDto> GetCMSContent(Guid id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public async Task<CmsPageDto> InsertOrUpdateCMSContent(CreateUpdateCmsPageDto dto)
-        {
-            throw new NotImplementedException();
+            return await base.GetListAsync(input);
         }
     }
 }
