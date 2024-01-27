@@ -15,6 +15,19 @@ function configureRoutes(routesService: RoutesService) {
         order: 1,
         layout: eLayoutType.application,
       },
+      {
+        path: '/cmspages-config',
+        name: '::Menu:CmsPagesConfig',
+        iconClass: 'fas fa-cmspage',
+        order: 2,
+        layout: eLayoutType.application,
+      },
+      {
+        path: '/cmspages',
+        name: '::Menu:CmsPages',
+        parentName: '::Menu:CmsPagesConfig',
+        layout: eLayoutType.application,
+      },
     ]);
   };
 }

@@ -3,6 +3,17 @@
   "texts": {
     "Menu:Home": "Home",
     "Welcome": "Welcome",
-    "LongWelcomeMessage": "Welcome to the application. This is a startup project based on the ABP framework. For more information, visit abp.io."
+    "LongWelcomeMessage": "Welcome to the Anderson Lorena Abp Test Application!",
+    "Menu:CmsPagesConfig": "CMS Page Config",
+    "Menu:CmsPages": "CMS Pages",
+    "Actions": "Actions",
+    "Close": "Close",
+    "Delete": "Delete",
+    "Edit": "Edit",    
+    "NewCmsPage": "New CMS Page",
+    "Name": "Name",    
+    "CreationTime": "Creation time",
+    "AreYouSure": "Are you sure?",
+    "AreYouSureToDelete": "Are you sure you want to delete this item?"
   }
 }
