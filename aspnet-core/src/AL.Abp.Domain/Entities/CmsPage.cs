@@ -24,7 +24,7 @@ namespace AL.Abp.Entities
             if (string.IsNullOrEmpty(Name) || Name.Length > DomainConsts.CmsPageNameMaxSize)
                 throw new BusinessException(DomainConsts.CmsPageNameValidationError);
 
-            if (string.IsNullOrEmpty(HtmlContent) || HtmlContent.Length > DomainConsts.CmsPageNameMaxSize)
+            if (string.IsNullOrEmpty(HtmlContent) || HtmlContent.Length > DomainConsts.CmsPageHtmlContentMaxSize)
                 throw new BusinessException(DomainConsts.CmsPageHtmlContentValidationError);
         }
     }

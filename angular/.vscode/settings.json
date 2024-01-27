@@ -3,6 +3,7 @@
         "cmspage",
         "cmspages",
         "datatable",
-        "dtos"
+        "dtos",
+        "tinymce"
     ]
 }

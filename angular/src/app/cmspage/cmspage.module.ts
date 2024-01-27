@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { SharedModule } from '../shared/shared.module';
 import { CmspageRoutingModule } from './cmspage-routing.module';
 import { CmspageComponent } from './cmspage.component';
+import { EditorModule } from '@tinymce/tinymce-angular';
 
 @NgModule({
   declarations: [
@@ -9,7 +10,8 @@ import { CmspageComponent } from './cmspage.component';
   ],
   imports: [
     CmspageRoutingModule,
-    SharedModule
+    SharedModule,
+    EditorModule
   ]
 })
 export class CmspageModule { }
