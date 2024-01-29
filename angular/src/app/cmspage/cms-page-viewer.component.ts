@@ -10,19 +10,6 @@ import { CmsPageDto } from '@proxy/dtos';
 export class CmsPageViewerComponent implements OnInit {
   htmlContent: string = '';
 
-  // constructor(
-  //   private route: ActivatedRoute,
-  //   private cmsPageService: CmsPageService
-  // ) {}
-
-  // ngOnInit() {
-  //   const pageId = this.route.snapshot.paramMap.get('id');
-  //   if (pageId) {
-  //     this.cmsPageService.get(pageId).subscribe((page: CmsPageDto) => {
-  //       this.htmlContent = page.htmlContent || '';
-  //     });
-  //   }
-  // }
   constructor(
     private route: ActivatedRoute,
     private cmsPageService: CmsPageService
