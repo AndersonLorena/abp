@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CmsPageViewerComponent } from './cmspage/cms-page-viewer.component';
 
 const routes: Routes = [
   {
@@ -25,11 +26,19 @@ const routes: Routes = [
     loadChildren: () =>
       import('@abp/ng.setting-management').then(m => m.SettingManagementModule.forLazy()),
   },
-  { path: 'cmspages', loadChildren: () => import('./cmspage/cmspage.module').then(m => m.CmspageModule) },
+  {
+    path: 'cmspages',
+    loadChildren: () =>
+      import('./cmspage/cmspage.module').then(m => m.CmspageModule)
+  },
+  {
+    path: 'pages/:id',
+    component: CmsPageViewerComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {})],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
