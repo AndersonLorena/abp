@@ -36,6 +36,9 @@ This CMS Application is built using the ABP framework with Angular. It allows us
 - Edit or delete pages using the options provided in the CMS pages list.
 - Access pages from the dynamic menu; clicking a menu item displays the page content.
 
+# Simple Demonstration Video
+https://youtu.be/bmuGk3_pa8Q
+
 ## Contributing
 Contributions to this project are welcome. Please follow the standard Git workflow - fork, branch, and submit a pull request for review.
 
